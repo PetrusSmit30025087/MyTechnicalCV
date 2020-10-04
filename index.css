@@ -1,0 +1,60 @@
+.back-img{
+    background-image: url(image/homepagebackground.jpg) no-repeat center fixed;
+    width: 100%;
+    max-height: 980px;
+    position: relative;
+}
+
+.intro-text h1{
+    position: relative;
+    width: 933px;
+    height: 150px;
+    left: 15px;
+    
+
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 165px;
+    flex : 1;
+    align-items: center;
+    text-align: right;
+    background: linear-gradient(to right, white,rgba(255, 203, 124, 1));
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+   background: red;
+   position: relative;
+   text-align: center;
+   
+}
+
+
+.homecontent{
+    display: flex;
+    position: absolute;
+    
+    z-index: 1;
+    width: 98%;
+    margin: 15px;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.Profile-picture{
+    height: 37vh;
+    flex: 1;
+    padding: 50px 50px 50px 150px;
+    
+}
+
+.rightarrownav{
+    position: relative;
+    padding-top: 15rem;
+    align-items: right;
+    padding-left: 15rem;
+    
+}
+
