@@ -55,9 +55,11 @@
 .rightarrow{
     position: relative;
     padding-right: 2rem;
-    align-items: right;
-    
-    
+    opacity: 50%;
+}
+
+.rightarrow:hover{
+    opacity: 100%;
 }
 
 main{
