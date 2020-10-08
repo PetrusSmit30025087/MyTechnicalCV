@@ -5,9 +5,11 @@ body {
     margin: 0;
     font-family: Poppins, sans-serif;
     background-size: contain;
-    /*background: rgba(46, 57, 67, 1);*/
+    
     background: linear-gradient(180deg, #000000 0%, rgba(38, 64, 87, 0.79) 100%);
     overflow: hidden;
+    background-repeat: no-repeat;
+    
 }
 
 
@@ -37,12 +39,10 @@ body {
 
 
 .main-nav a:hover{
-    /*color:rgba(171, 45, 6, 1);*/
+    color:rgb(224, 174, 64);
     text-shadow: 1px 1px 1px rgb(226, 13, 13);
     
 }
-
-
 
 
 
@@ -53,8 +53,8 @@ body {
 
 header {
     display: flex;
-    /*background: rgba(222, 133, 0, 0.85);*/
-    background: black;
+    
+    background: rgb(48, 47, 47);
     
     mix-blend-mode: normal;
 }
@@ -66,4 +66,69 @@ header {
     top: 0;
     z-index: 2;
     width: 100%;
+}
+
+.hcontainer{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,-50%);
+    
+    padding: 5em;
+}
+
+.word{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    width: 45px;
+    height: 80%;
+    color: white;
+    
+}
+
+span{
+    flex: 1;
+    position: relative;
+    
+}
+
+span::before{
+    content: attr(data-content);
+    position :absolute;
+    top: 0;
+    color: transparent;
+    text-shadow: none;
+
+}
+
+.word:hover span::before{
+    transition: 0.6s ease;
+    color: rgba(255, 255, 255, 0.8);
+    animation: falls 1s ease forwards;
+}
+
+.word:hover span:nth-child(1)::before{
+    animation: falls 0.9s ease 0.2s forwards;
+}
+
+.word:hover span:nth-child(2n+3)::before{
+    animation: falls 1s ease 0.3s forwards;
+}
+
+@keyframes falls{
+    0%{
+        opacity: 0;
+        top: 0;
+    }
+    20%{
+        opacity: 1;
+       
+    }
+    100%{
+        opacity: 0;
+        top: 100px;
+    }
 }

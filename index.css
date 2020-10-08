@@ -56,10 +56,12 @@
     position: relative;
     padding-right: 2rem;
     opacity: 50%;
+    filter: drop-shadow(0px 5px 3px black);
 }
 
 .rightarrow:hover{
     opacity: 100%;
+    filter: drop-shadow(0px 5px 3px orange);
 }
 
 main{
