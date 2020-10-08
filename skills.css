@@ -30,7 +30,7 @@ main{
 }
 
 .container{
-    
+    animation: 1s ease-out 0s 1 fadeIn;
     height: 60vh;
     width: 90%;
     margin: 0 auto;
@@ -67,10 +67,60 @@ body{
 }
 
 .excontainer{
-    background: rgb(243, 243, 243);
+    background: rgb(243, 243, 243) ;
     position: absolute;
     top: 0;
     height: 60%;
     width: 100%;
 }
+@keyframes fadeIn{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.firstp, .secondp, .cv{
+    font-size: 20px;
+    text-align: center;
+}
 
+@media (max-width: 1110px){
+    /*.container{
+        
+        
+        align-content: center;
+        justify-content: center;
+        height: auto;
+        
+    }*/
+    
+    body{
+        background: rgba(45, 56, 66, 0.79);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftarrow, .rightarrow{
+        height: 50%;
+        width: 50%;
+        padding: 0;
+    }
+    .word{
+        font-size: 100%;
+    } 
+    .leftarrow{
+        padding-left: 3px;
+    }
+    .rightarrow{
+        justify-content: right;
+        padding-left: 6px;
+    }
+
+    .extrasection{
+        display: none;
+    }
+    
+
+}

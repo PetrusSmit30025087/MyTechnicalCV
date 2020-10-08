@@ -6,9 +6,12 @@ main{
 }
 
 .leftarrow{
+    position: absolute;
     padding-left: 0.5rem;
+    top: 50%;
     padding-right: 0.5rem;
     opacity: 50%;
+    z-index: 3;
     filter: drop-shadow(0px 5px 3px black);
 }
 
@@ -16,11 +19,103 @@ main{
     opacity: 100%;
     filter: drop-shadow(0px 5px 3px orange);
 }
+.rightarrow{
+    position: absolute;
+    right: 0.5rem;
+    padding-left: 0.5rem;
+    top: 50%;
+    padding-right: 0.5rem;
+    opacity: 50%;
+    z-index: 3;
+    filter: drop-shadow(0px 5px 3px black);
+}
+
+.rightarrow:hover{
+    opacity: 100%;
+    filter: drop-shadow(0px 5px 3px orange);
+}
 
 
 .container{
-    background-color: white;
-    height: 60vh;
-    width: 90%;
-    margin: 0 auto;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
 }
+
+.btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 4px 15px -5px #00000070;
+    color: #f0932b;
+    overflow: hidden;
+    position: relative;
+}
+.btn i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i{
+    transform: scale(1.3);
+    color:#f1f1f1;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #f0932b;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+.btn:hover::before{
+    animation: colorin 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes colorin{
+    0%{
+        left:-110%;
+        top: 90%;
+    }50%{
+        left: 10%;
+        top:-30%;
+    }100%{
+        top: -10%;
+        left: -10%;
+    }
+}
+
+.contactheading{
+    color: white;
+}
+
+@media (max-width: 380px){
+    .word{
+        font-size: 30px;
+    }
+
+    .leftarrow{
+        top: 0;
+        width: 10%;
+    }
+    .rightarrow{
+        top: 0;
+        width: 10%;
+    }
+}
+
+
+
+
+  
