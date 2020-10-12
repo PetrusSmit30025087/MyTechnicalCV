@@ -2,7 +2,7 @@ main{
     display: flex;
     position: relative;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
 }
 
 .leftarrow{
@@ -87,17 +87,10 @@ body{
 }
 
 @media (max-width: 1110px){
-    /*.container{
-        
-        
-        align-content: center;
-        justify-content: center;
-        height: auto;
-        
-    }*/
+    
     
     body{
-        background: rgba(45, 56, 66, 0.79);
+       
         display: flex;
         flex-direction: column;
     }
